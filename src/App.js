@@ -5,7 +5,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          open source code by nightmare.child on <a href="/"></p>github</a>
+          open source code by nightmare.child on github </p>
           <code>src/App.js</code>
         </p>
         <a
