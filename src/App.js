@@ -1,22 +1,18 @@
 import "./App.css";
+import Search from "./Search";
 
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          open source code by nightmare.child on github </p>
-          <code>src/App.js</code>
+      <header className="App-header"></header>
+      <Search />
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <footer>
+        <small>
+          open source code by nightmare.child on{" "}
+          <a href="https://github.com/nissrineninas/dictionary-app">github</a>
+        </small>
+      </footer>
     </div>
   );
 }
