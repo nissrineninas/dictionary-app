@@ -49,11 +49,30 @@ p {
 
 .vr {
   color: var(--secondary-color);
-  opacity: 100%;
-  width: 4px;
+  display: flex;
+  opacity: 1;
+  width: 1px;
 }
 #landing-page {
+  font-family: Righteous;
+  font-style: normal;
   font-weight: bold;
+  font-size: 100px;
+  line-height: 124px;
+  text-align: left;
+  text-shadow: 2px 1px var(--teritary-color);
+  /* display: flex; */
+  word-break: break-all;
+}
+
+@media (max-width: 900px) {
+  #landing-page {
+    font-size: 70px;
+  }
+
+  .vr{
+    display: none;
+  }
 }
 @keyframes App-logo-spin {
   from {

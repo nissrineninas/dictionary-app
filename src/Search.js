@@ -4,8 +4,10 @@ import "./App.css";
 
 export default function Search(event) {
   let [word, setWord] = useState(null);
-  function handleSubmit() {
+
+  function handleSubmit(event) {
     event.preventDefault();
+    alert(`loading...${word}`);
   }
 
   function updateWord(event) {
@@ -14,16 +16,18 @@ export default function Search(event) {
   }
 
   return (
-    <div className="container search-form">
+    <div className="container-fluid search-form">
       <form onSubmit={handleSubmit}>
         <div className="row">
-          <div className="col-5">
+          <div className="col-md-6 auto">
             <h2 id="landing-page">
-              Let’s get <span className="landing-page">insightful</span>
+              Let’s
+              <br /> get
+              <br /> <span className="landing-page">insightful</span>
             </h2>
           </div>
           <div className="vr"></div>
-          <div className="col-6 border-left pl-2">
+          <div className="col-md-5 auto border-left pl-2 search-form-right">
             <input
               type="search"
               placeholder="type a word to search for"
