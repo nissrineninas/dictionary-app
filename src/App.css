@@ -2,6 +2,7 @@
   --primary-color: #ffffff;
   --secondary-color: #ff4400;
   --teritary-color: #282c34;
+  --highlight-color: #f1c40f;
 }
 
 body {
@@ -15,6 +16,45 @@ p {
   color: #61dafb;
 }
 
+.footer-element {
+  align-content: center;
+  color: var(--teritary-color);
+}
+
+.footer-element strong {
+  color: var(--secondary-color);
+}
+
+.footer-element a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+.footer-element a:hover {
+  color: var(--teritary-color);
+}
+.footer-element a:visited {
+  color: var(--highlight-color);
+}
+
+.landing-page {
+  color: var(--secondary-color);
+}
+
+.search-form {
+  border: 2px solid var(--highlight-color);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.vr {
+  color: var(--secondary-color);
+  opacity: 100%;
+  width: 4px;
+}
+#landing-page {
+  font-weight: bold;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

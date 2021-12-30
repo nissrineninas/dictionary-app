@@ -8,8 +8,8 @@ export default function App() {
       <Search />
 
       <footer>
-        <small>
-          open source code by nightmare.child on{" "}
+        <small className="footer-element">
+          open source code by <strong>nightmare.child </strong> on{" "}
           <a href="https://github.com/nissrineninas/dictionary-app">github</a>
         </small>
       </footer>
