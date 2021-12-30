@@ -7,7 +7,7 @@ export default function App() {
         <p>
           open source code by nightmare.child on github </p>
           <code>src/App.js</code>
-        </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
