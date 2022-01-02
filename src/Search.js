@@ -2,62 +2,31 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import axios from "axios";
+import Results from "./Results";
 
 export default function Search(event) {
-  let [word, setWord] = useState(null);
+  let [word, setWord] = useState("");
   let [wordData, setWordData] = useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`loading...${word}`);
-    callApi();
+    connectApi();
   }
 
   function updateWord(event) {
     event.preventDefault();
     setWord(event.target.value);
   }
-
-  function callApi() {
+  function connectApi() {
     //https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios
-      .get(apiUrl)
-      .then(getDefiniton)
-      .catch(function (error) {
-        emptyDefinition();
-        alert(`${word} cannot be found, please check your entry`);
-      });
-  }
+    axios.get(apiUrl).then(getDefiniton);
 
-  function getDefiniton(response) {
-    console.log(response.data[0]);
-    //add setting of variables in here
-    // setWordData({
-    //   "phonetics": response.data.phonetics.map(function (getAllPhonetics,index)
-    //   { return (
-    //     <div key={index}>{getAllPhonetics.text}</div>
-    //       );
-    //     },
-
-    //     "meanings": response.data.meanings.map(function (getElementsInMeanings, index) {
-    //         return (
-    //             <span key={index}>{getElementsInMeanings};</span>)},
-    //             )[
-
-    //         "partOfSpeech":response.data.meanings.map(function (getAllPartsOfSpeech, index) {
-    //         return (
-    //             <span key={index}>{getAllPartsOfSpeech.partOfSpeech};</span>)},
-    //         "definitions":response.data.meanings.map(function (getAllDefinitions, index) {
-    //         return (
-    //             <span key={index}>{getAllDefinitions.definitions};</span>)}
-    //         ],
-    // });
-  }
-
-  function emptyDefinition() {
-    //empty variable states in here
-    setWordData(null);
+    function getDefiniton(response) {
+      console.log(response.data[0]);
+      setWordData(response.data[0]);
+      console.log({ wordData });
+    }
   }
 
   return (
@@ -83,6 +52,7 @@ export default function Search(event) {
           </div>
         </div>
       </form>
+      <Results results={wordData} />
     </div>
   );
 }
