@@ -9,7 +9,7 @@ export default function Phonetics(props) {
   //   }
   return (
     <div className="phonetics">
-      <strong>Phonetics</strong>
+      <strong>Phonetics </strong>
       {props.phonetics.map(function (phonetics, index) {
         return (
           <span key={index}>

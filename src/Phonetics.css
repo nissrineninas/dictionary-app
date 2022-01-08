@@ -15,3 +15,11 @@
 .phonetics a:visited {
   color: var(--highlight-color);
 }
+
+.synonyms-box {
+  border: 1px solid var(--secondary-color);
+  border-radius: 20%;
+  color: var(--secondary-color);
+  padding: 8px 10px;
+  width: auto;
+}

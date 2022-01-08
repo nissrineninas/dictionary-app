@@ -42,13 +42,20 @@ export default function Search(event) {
           </div>
           <div className="vr"></div>
           <div className="col-md-5 auto border-left pl-2 search-form-right">
-            <input
-              type="search"
-              placeholder="type a word to search for"
-              onChange={updateWord}
-              autoFocus={true}
-            />
-            <input type="submit" value="Let's Go!" />
+            <div className="landing-page-right">
+              <p>
+                Look up some words in our dictionary to find out more about
+                their meaning and pronunciation.
+              </p>
+              <input
+                type="search"
+                placeholder="ex. dictionary"
+                onChange={updateWord}
+                autoFocus={true}
+              />
+              <span> </span>
+              <input type="submit" value="Let's Go!" />
+            </div>
           </div>
         </div>
       </form>
