@@ -1,0 +1,17 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #ff4400;
+  --teritary-color: #282c34;
+  --highlight-color: #f1c40f;
+}
+
+.phonetics a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+.phonetics a:hover {
+  color: var(--teritary-color);
+}
+.phonetics a:visited {
+  color: var(--highlight-color);
+}

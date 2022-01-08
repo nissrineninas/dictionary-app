@@ -25,14 +25,18 @@ p {
   color: var(--secondary-color);
 }
 
-.footer-element a {
+/* .footer-element  */
+a {
   color: var(--secondary-color);
   text-decoration: none;
 }
-.footer-element a:hover {
+
+/* .footer-element  */
+a:hover {
   color: var(--teritary-color);
 }
-.footer-element a:visited {
+/* .footer-element  */
+a:visited {
   color: var(--highlight-color);
 }
 
@@ -70,7 +74,7 @@ p {
     font-size: 70px;
   }
 
-  .vr{
+  .vr {
     display: none;
   }
 }
