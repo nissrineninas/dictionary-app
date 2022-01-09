@@ -1,5 +1,5 @@
 import React from "react";
-import "./Phonetics.css";
+import "./Synonyms.css";
 
 export default function Synonyms(props) {
   console.log(props.synonyms);
@@ -11,7 +11,7 @@ export default function Synonyms(props) {
           return (
             <div className="w2-auto d-inline-flex synonyms-box" key={index}>
               {synonym}
-                        </div>
+            </div>
           );
         })}
       </div>

@@ -1,46 +1,38 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import axios from "axios";
-import Results from "./Results";
+import "./Search.css";
+import SearchSubmit from "./SearchSubmit";
 
 export default function Search(event) {
   let [word, setWord] = useState("");
-  let [wordData, setWordData] = useState(null);
+  let [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
-    connectApi();
+    setIsSubmitted(true);
   }
 
   function updateWord(event) {
     event.preventDefault();
     setWord(event.target.value);
   }
-  function connectApi() {
-    //https://dictionaryapi.dev/
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(apiUrl).then(getDefiniton);
 
-    function getDefiniton(response) {
-      console.log(response.data[0]);
-      setWordData(response.data[0]);
-      console.log({ wordData });
-    }
+  if (isSubmitted) {
+    return <SearchSubmit word={word} />;
   }
 
   return (
     <div className="container-fluid search-form">
-      <form onSubmit={handleSubmit}>
+      <form className="opacity-100" onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-6 auto">
-            <h2 id="landing-page">
+            <h2 id="landing-page-left">
               Let’s
               <br /> get
               <br /> <span className="landing-page">insightful</span>
             </h2>
           </div>
-          <div className="vr"></div>
+          <div className="vr p-1 opacity-100"></div>
           <div className="col-md-5 auto border-left pl-2 search-form-right">
             <div className="landing-page-right">
               <p>
@@ -48,18 +40,22 @@ export default function Search(event) {
                 their meaning and pronunciation.
               </p>
               <input
+                className="search-label"
                 type="search"
                 placeholder="ex. dictionary"
                 onChange={updateWord}
-                autoFocus={true}
+                autoFocus={false}
               />
               <span> </span>
-              <input type="submit" value="Let's Go!" />
+              <input
+                className="btn search-btn"
+                type="submit"
+                value="Let's Go!"
+              />
             </div>
           </div>
         </div>
       </form>
-      <Results results={wordData} />
     </div>
   );
 }

@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #ff4400;
+  --teritary-color: #282c34;
+  --highlight-color: #f1c40f;
+}
+
+h1,
+h2 {
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-family: "Righteous", cursive;
+}
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.definition-box-submit {
+  text-align: left;
+  border: 1px solid var(--secondary-color);
+}
+
+.search-btn-submit,
+.search-label-submit {
+  border-radius: 25px;
+  display: block;
+  padding: 3px 10px 3px 10px;
+}
+
+.search-label-submit {
+  color: var(--teritary-color);
+  background-color: var(--primary-color);
+    box-shadow: 1px 1px 1px 1px var(--highlight-color);
+
+  margin-top: 15px;
+  margin-left: 30px;
+  width: 300px;
+}
+
+.search-btn-submit {
+  background-color: var(--secondary-color) !important;
+  color: var(--primary-color);
+  margin-top: 10px;
+  margin-left: 310px;
+  width: 150px;
+}
+
+.landing-page-right-submit {
+  color: var(--teritary-color);
+  opacity: 0.9;
+  padding: 5px 10px;
+}
