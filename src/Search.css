@@ -6,7 +6,7 @@
 }
 
 p {
-  margin-bottom: 40px;
+  color: rgba(153, 153, 153, 1);
 }
 #landing-page-left {
   color: var(--teritary-color);
@@ -19,7 +19,7 @@ p {
   text-align: left;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   /* display: flex; */
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 .landing-page {
@@ -29,7 +29,6 @@ p {
 
 .landing-page-right {
   color: var(--teritary-color);
-  opacity: 0.7;
   padding: 100px 50px;
 }
 
@@ -44,12 +43,13 @@ p {
 .search-label {
   border-radius: 25px;
   display: inline-flexbox;
-  padding: 3px 10px 3px 10px;
+  margin-top: 20px;
+  padding: 3px 10px 3px;
 }
 
 .search-label {
   box-shadow: 2px 2px 2px var(--secondary-color);
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 
 .search-btn {
@@ -57,20 +57,16 @@ p {
   color: var(--primary-color);
 }
 
-@media (max-width: 900px) {
-  #landing-page {
-    font-size: 70px;
+@media (max-width: 800px) {
+  #landing-page-left {
+    font-size: 65px;
+      line-height: 80px;
+
+      margin-left: 0px;
+      padding-left: 0px;
   }
 
   .vr {
     display: none;
-  }
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

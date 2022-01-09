@@ -33,7 +33,7 @@ export default function Search(event) {
             </h2>
           </div>
           <div className="vr p-1 opacity-100"></div>
-          <div className="col-md-5 auto border-left pl-2 search-form-right">
+          <div className="col-md-4 auto border-left pl-2 search-form-right">
             <div className="landing-page-right">
               <p>
                 Look up some words in our dictionary to find out more about

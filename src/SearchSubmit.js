@@ -7,9 +7,17 @@ import Results from "./Results";
 export default function SearchSubmit(props) {
   let [word, setWord] = useState(props.word);
   let [wordData, setWordData] = useState(null);
+  let [conectToApi, setConnectToAPI] = useState(true);
+
+  console.log("word: " + word);
+  console.log("prop word: " + props.word);
+  console.log("connect to api: " + conectToApi);
+
+  connectApi();
 
   function handleSubmit(event) {
     event.preventDefault();
+    setConnectToAPI(true);
     connectApi();
   }
 
@@ -18,6 +26,12 @@ export default function SearchSubmit(props) {
     setWord(event.target.value);
   }
   function connectApi() {
+    if (!conectToApi) {
+      console.log("do not connect to API");
+      return;
+    }
+    setConnectToAPI(false);
+    console.log("connect to API");
     //https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(getDefiniton);
@@ -41,7 +55,7 @@ export default function SearchSubmit(props) {
             <input
               className="search-label-submit"
               type="search"
-              placeholder={word}
+              value={word}
               onChange={updateWord}
               autoFocus={false}
             />
