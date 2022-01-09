@@ -50,15 +50,25 @@
   color: var(--primary-color);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   #landing-page-left {
     font-size: 65px;
     line-height: 80px;
-
     margin-left: 0px;
-    padding-left: 0px;
+    padding: 100px 50px;
   }
 
+  .landing-page-right {
+    text-align: left;
+  }
+
+  .search-btn,
+  .search-label {
+    border-radius: 25px;
+    display: inline-flexbox;
+    margin-top: 5px;
+    padding: 3px 10px 3px;
+  }
   .vr {
     display: none;
   }
