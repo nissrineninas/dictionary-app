@@ -1,0 +1,12 @@
+.Meaning {
+  color: var(--teritary-color);
+}
+
+.Meaning h3 {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+#example {
+  color: rgba(153, 153, 153, 1);
+}

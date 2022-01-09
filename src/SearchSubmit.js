@@ -9,10 +9,6 @@ export default function SearchSubmit(props) {
   let [wordData, setWordData] = useState(null);
   let [conectToApi, setConnectToAPI] = useState(true);
 
-  console.log("word: " + word);
-  console.log("prop word: " + props.word);
-  console.log("connect to api: " + conectToApi);
-
   connectApi();
 
   function handleSubmit(event) {

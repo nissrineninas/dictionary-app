@@ -1,11 +1,4 @@
-:root {
-  --primary-color: #ffffff;
-  --secondary-color: #ff4400;
-  --teritary-color: #282c34;
-  --highlight-color: #f1c40f;
-}
-
-p {
+.grey-font {
   color: rgba(153, 153, 153, 1);
 }
 #landing-page-left {
@@ -60,10 +53,10 @@ p {
 @media (max-width: 800px) {
   #landing-page-left {
     font-size: 65px;
-      line-height: 80px;
+    line-height: 80px;
 
-      margin-left: 0px;
-      padding-left: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
   }
 
   .vr {

@@ -35,7 +35,7 @@ export default function Search(event) {
           <div className="vr p-1 opacity-100"></div>
           <div className="col-md-4 auto border-left pl-2 search-form-right">
             <div className="landing-page-right">
-              <p>
+              <p className="grey-font">
                 Look up some words in our dictionary to find out more about
                 their meaning and pronunciation.
               </p>

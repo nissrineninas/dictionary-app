@@ -22,13 +22,10 @@ h2 {
   max-width: 500px;
 }
 
-p {
-  color: var(--teritary-color);
-  opacity: 0.7;
-}
 .definition-box-submit {
   text-align: left;
   border: 1px solid var(--secondary-color);
+  padding: 8px;
 }
 
 .search-btn-submit,
